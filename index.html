@@ -23,15 +23,37 @@
         .name {
             color: darkblue; /* Dark blue color for the name */
         }
+        .note-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        textarea {
+            width: 300px;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div>
         <h1>Welcome to Kishan Jha Portfolio</h1>
         <h1>My <details></details></h1>
-        <h1 class="name">My name: Kishan Kumar Jha</h1> <!-- Added your name here with class -->
+        <h1 class="name">My name: Kishan Kumar Jha</h1>
         <h1>My Class: VIII</h1>
-        <h1>My Father Name-Mukesh kumar jha </h1>
+        <h1>My Father's Name: Mukesh Kumar Jha</h1>
+        <h2>My Hoppy is to play cricket i'm a dieheart lover of MSD </h2>
     </div>
     <div>
         <img
@@ -39,5 +61,43 @@
             style="height: 500px"
         />
     </div>
+    <div class="note-container">
+        <h2>Leave a Note:</h2>
+        <textarea id="note" placeholder="Write your note here..."></textarea>
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const note = document.getElementById('note').value;
+
+            if (note) {
+                // Replace with your actual backend URL
+                const url = 'https://your-backend-url.com/submit-note';
+
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ note }),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Note submitted successfully!');
+                        document.getElementById('note').value = ''; // Clear the textarea
+                    } else {
+                        alert('Failed to submit note. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+            } else {
+                alert('Please enter a note before submitting.');
+            }
+        });
+    </script>
 </body>
 </html> 
