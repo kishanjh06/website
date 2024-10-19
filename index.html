@@ -44,6 +44,12 @@
             border: none;
             cursor: pointer;
         }
+        .about {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -55,61 +61,17 @@
         <h1>My Father's Name: Mukesh Kumar Jha</h1>
         <h2>My Hobby is to play cricket; I'm a diehard fan of MSD.</h2>
     </div>
+
+    <div class="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Kishan, an enthusiastic student currently in Class VIII. 
+            I have a passion for cricket and admire players like MS Dhoni. 
+            Besides sports, I enjoy reading books and exploring new technologies. 
+            I strive to do my best in academics and love learning about science and math.
+        </p>
+    </div>
+
     <div>
         <img
-            src="https://lh3.googleusercontent.com/ppp/ANBmsvmlsIsy8z7lYN-m7dMitL--hTJuB-l-qnMZ1PipIeGrcnJOA9fZJ--aYc_lClIfGbHTVesZevJ7fhlt0t-CZ6MVG4fNsgx33sJ9fItfRE0xz14owdhR6WLuLeJ2P9q9cBmRa3xqIJ4E9DK1L8xaTCNWlfuWpG-iRiDKjRTW4qEi8-iiNgM1p9lSAYnwfM0rRu4zIk7qF5z1zzhY4r2Oqj4BPcPpxYfBp937Spkqx7QIj2BvCTtcsKN7lh8_3NjdFP-owgE_wxLjKN-zsqudOMwQmbQgLIEcDw6BLwOdZm43U5P09h515m7IvZZEiUrIjwYGks3SDSddmcFft3hpb4VUqKEdrraiHhIg-sPtXpvBeOOxLARLMV7lcdpYfU0siHODODI2bjD2UjcxxaEm6-xzGX4IcGVomamWmN1qbGpErmOofbZO0Ak8hzLH-rYpTiZq_3jt4LBhmQmojR9gT3KAp-9kvE17o_0JW52I3m6VV3xi7uo3YN8cQarH7sC3b1RZTHLjLwfwRp1bTRLiTor2PAzMHGq3VH-6tHCz8LK0Fyl_QLERbelkghF2k2jEuKy5IeXKgE2J6LtZ2LBLTM7FvPQr3Gs1pJno5smS-yqTPPuWMDJnTME_xT5ia80x1WhFOHQpDjZ7sg1pl1H1jyxdFspVzTh52taVJQYEwpoU9ppzAv3ZvFDLOnJ2sYvlZY5UFgDELBvHasK4lfcFEbvl0YC-OkIwVNUoPCgK-23dStocUZofnRyFEzejWLS9ReU9hTyA-pEbpKXl5dlHaQvRSBJm4U-7TQg9OmgDUFLnpR1alsBjCTjuIgt7IxWLxIF3cU6NEIfUs-v7Bgqq2gfWgQmkEsfAdx_CVX1rDomVd1GDaftLRAF2pamq8GUkCbhu-D8rYfoQRg4r5sKM41P7dLs2OCONirsxEPXKwrTTCh1_cYiSkw4tRXieygDdWjG0M0-C5m704MToP7FPrWtVuD9Sgq0YXScDssCbqwlWM53Og_i2t0Kub71PhtYRajoTFYJP5NEgUHkKFexOyiuTWQO31XBpC0x9G-FErmgsbrWJtzUAj3PQtDz2IaURY8QGqg=s1850"
-            style="height: 500px"
-            alt="Image related to Kishan Jha"
-        />
-    </div>
-    
-    <!-- Add MS Dhoni's Image -->
-    <div>
-        <h2>My Favorite Player: MS Dhoni</h2>
-        <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/MS_Dhoni_in_2018.jpg/800px-MS_Dhoni_in_2018.jpg"
-            style="height: 300px; border-radius: 10px;"
-            alt="MS Dhoni"
-        />
-    </div>
-
-    <div class="note-container">
-        <h2>Leave a Note:</h2>
-        <textarea id="note" placeholder="Write your note here..."></textarea>
-        <button id="submitBtn" type="button">Submit</button>
-    </div>
-
-    <script>
-        document.getElementById('submitBtn').addEventListener('click', function() {
-            const note = document.getElementById('note').value;
-
-            if (note) {
-                // Replace with your actual backend URL
-                const url = 'https://your-backend-url.com/submit-note';
-
-                fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ note }),
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Note submitted successfully!');
-                        document.getElementById('note').value = ''; // Clear the textarea
-                    } else {
-                        alert('Failed to submit note. Please try again.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred. Please try again.');
-                });
-            } else {
-                alert('Please enter a note before submitting.');
-            }
-        });
-    </script>
-</body>
-</html>  
+            src="https://lh3.googleusercontent.com/ppp/ANBmsvmlsIsy8z7lYN-m7dMitL--hTJuB-l-qnMZ1PipIeGrcnJOA9fZJ--aYc_lClIfGbHTVesZevJ7fhlt0t-CZ6MVG4fNsgx33sJ9fItfRE0xz14owdhR6WLuLeJ2P9q9cBmRa3xqIJ4E9DK1L8xaTCNWlfuWpG-iRiDKjRTW4qEi8-iiNgM1p9lSAYnwfM0rRu4zIk7qF5z1zzhY4r2Oqj4BPcPpxYfBp937Spkqx7QIj2BvCTtcsKN7lh8_3NjdFP-owgE_wxLjKN-zsqudOMwQmbQgLIEcDw6BLwOdZm43U5P09h515m7IvZZEiUrIjwYGks3SDSddmcFft3hpb4VUqKEdrraiHhIg-sPtXpvBeOOxLARLMV7lcdpYfU0siHODODI2bjD2UjcxxaEm6-xzGX4IcGVomamWmN1qbGpErmOofbZO0Ak8hz
